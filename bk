@@ -1,0 +1,25 @@
+# !/bin/bash
+
+CHECKING=${1}.
+LIVEHOSTS=""
+LIVECOUNT=0
+TOTALHOSTS=$(($3 - $2 + 1))
+for i in `seq ${2} ${3}`
+do
+    CHECKING="$CHECKING${i} "
+    ping -c 1 -t 1 ${1}.${i} > /dev/null 2>&1;
+    if [ $? -eq 0 ]; then
+        LIVEHOSTS="$LIVEHOSTS \n ${1}.${i}"
+        LIVECOUNT=$((LIVECOUNT+1))
+    fi
+done
+echo ""
+echo "Checking: $CHECKING"
+echo ""
+echo "Live hosts:"
+echo -e "$LIVEHOSTS"
+echo ""
+echo "There are:"
+echo "$LIVECOUNT alive hosts"
+echo "$((TOTALHOSTS - $LIVECOUNT)) not alive hosts"
+echo "found through the use of ping"
