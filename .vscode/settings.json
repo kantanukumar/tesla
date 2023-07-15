@@ -1,0 +1,33 @@
+{
+    "workbench.colorCustomizations": {
+        "tree.indentGuidesStroke": "#33ff00"
+    },
+    "workbench.tree.indent": 25,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope":"comment",
+                "settings": {
+                    "foreground": "#0400ff",
+                    "fontStyle": "bold"
+                }
+            }
+        ]
+    },
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal",
+            "color": "terminal.ansiGreen"
+        }
+    },
+    "terminal.integrated.tabs.title": "Terminal",
+    "files.associations": {
+        "memory_resource": "c",
+        "memory": "c",
+        "type_traits": "c"
+    },
+    "C_Cpp.intelliSenseEngineFallback": "enabled"
+
+}
