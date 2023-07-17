@@ -1,0 +1,7 @@
+1. I have deleted the ssh keys from github and my home folder .ssh.
+
+2. I have all the access enabled in github, with fine grained tokens.
+
+3. With this I should be able to commit from CLI.
+
+4. I need to check the VS code next.
