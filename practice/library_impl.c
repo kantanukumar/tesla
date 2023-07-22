@@ -78,11 +78,25 @@ void * myStrstr(char *s1, char *s2)
     return NULL;       
 }
 
+char *myStrchr(char *s, int c)
+{
+  int len = strlen(s);
+  int i = 0;
+
+  for(i = 0; i < len; i++)
+  {
+    if((int)s[i] == c)
+      return &s[i];
+  }
+
+  return NULL;
+}
 
 int main()
 {
     // printf("Match = %s\n", myStrCmp("Kantanu", "Kanta")? "fail" : "success");
     printf("Match at %p\n", myStrstr("Kantanu", "ant"));
+    printf("Match at %p\n", myStrchr("Kantanu", 'K'));
     #if 0
     char arr[18] = "Kantanu";
     char *ptr = malloc(15);
