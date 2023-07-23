@@ -18,6 +18,16 @@ struct node
 struct node *front = NULL;
 struct node *rear  = NULL;
 
+/*
+  This also can be reformatted as below:
+  struct queue
+  {
+    struct node *qFront;
+    struct node *qRear;
+    int qElemCnt;
+  };
+*/
+
 int elemCnt = 0;
 
 void enQ(int data)
@@ -88,7 +98,7 @@ int main(int argc, char *argv[])
   {
     printf("Passed more than one argument, process it\n\n");
 
-    // Process the arguments, those contains the elem 
+    // Process the arguments, those contains the elem
 
     int idx = 1;
     int data = 0;
