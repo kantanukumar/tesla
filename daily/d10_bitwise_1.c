@@ -98,9 +98,30 @@ void setBitRange()
   num |= v;
 
   printf("Num=%x after setting %x fro pos %d-%d\n", num, v, i, j);
+}
+
+// Swap two bit values, easy but forgot :(
+void swapValues()
+{
 
 }
 
+void countSetBits()
+{
+  printf("Count set bits\n");
+  int num = 0, cnt = 0;
+  printf("Enter a num(hex): ");
+  scanf("%x", &num);
+
+  while(num > 0)
+  {
+    num &= num-1;
+    cnt++;
+  }
+
+  printf("Cnt=%d\n", cnt);
+
+}
 // Just emulate main()
 // This just displays the number in binary equivalent.
 // If we want to convert the number to binary, then we need
@@ -164,7 +185,8 @@ int main(int argc, char *argv[])
   // setIthBit();
   // clearIthBit();
   // updateIthBit();
-  setBitRange();
+  // setBitRange();
+  countSetBits();
 
 
   printf("\nEnd of the program\n");
