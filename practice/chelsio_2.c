@@ -2,7 +2,7 @@
 
 int main()
 {
-#if 1
+#if 0
 // Q - 4
 // Define a linked list node, allocate contiguous memory of 10 nodes.
 // Assign 5, to the 5th node.
@@ -48,12 +48,20 @@ Q - 2
         printf(" -1 is less\n");
 #endif
 
-#if 0
-    // This stops, when i becomes zero, because of unsigned arithmatic
-    char i = 1;
+#if 1
+    // This stops, when i becomes zero, because of overflow.
+//  int i = 0;
+//  while(i++)
+//      printf("%d ", i);
+   
+   /*
+    // This is the overflow condition
+    long int i = 0xFFFFFFFF;
+    printf("%lx ", i);
+    ++i;
+    printf("%lx \n", i);
 
-    while(i++)
-        printf("%d ", i);
+    */
 #endif
 
     return 0;
