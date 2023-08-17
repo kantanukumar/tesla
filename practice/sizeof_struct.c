@@ -4,7 +4,6 @@
  *
  * Problem: Calcuclate sizeof a structure, without sizeof operator.
  *              i.e. Create a MACRO for to calculate struct size
- *  One of the IPC mechanism.
  *
  * Approach:
  *  A1. Just call the sizeof() from MACRO
